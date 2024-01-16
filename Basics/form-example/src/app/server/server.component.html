@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <input type="text" class="form-control" [(ngModel)]="serverName">
+    <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
+    <p>{{allowNewServer}}</p>
+  </div>
+  <div class="row">
+    <p>The Server with ID
+      {{ serverId }} is
+      {{ getServerStatus() }}
+      <br>
+      {{serverCreationStatus}}
+    </p>
+  </div>
+</div>
