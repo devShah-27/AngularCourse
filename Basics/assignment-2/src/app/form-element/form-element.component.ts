@@ -10,17 +10,17 @@ export class FormElementComponent {
   allowReset = false;
   userName = "defaultUserName";
 
-  onUserNameEmpty() {
-    if (this.userName != '') {
-      this.allowReset = true;
-    }
-    else {
-      this.allowReset = false;
-    }
-    return this.allowReset;
-  }
+  // onUserNameEmpty() {
+  //   if (this.userName != '') {
+  //     this.allowReset = true;
+  //   }
+  //   else {
+  //     this.allowReset = false;
+  //   }
+  //   return this.allowReset;
+  // }
 
-  onMakeFieldEmpty() {
-    this.userName = '';
-  }
+  // onMakeFieldEmpty() {
+  //   this.userName = '';
+  // }
 }
