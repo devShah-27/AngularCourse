@@ -5,11 +5,17 @@
     <p>{{allowNewServer}}</p>
   </div>
   <div class="row">
-    <p>The Server with ID
+    <!-- <p>The Server with ID
       {{ serverId }} is
-      {{ getServerStatus() }}
-      <br>
-      {{serverCreationStatus}}
-    </p>
+      {{ getServerStatus() }} -->
+    <!-- <p>{{serverCreationStatus}}</p> -->
+
+    <p *ngIf="serverCreated; else noServer" [ngStyle]="{color: getColor()}">Server was created with name {{serverName}}</p>
+    <ng-template #noServer>
+      <p>No server was created!</p>
+    </ng-template>
+
+    <app-server *ngFor="let server of servers"></app-server>
+
   </div>
 </div>
