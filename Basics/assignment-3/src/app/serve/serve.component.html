@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <!-- <button class="btn btn-primary" (click)="toggleDisplay = !toggleDisplay" (click)="onCountArray()">Display Details</button> -->
+      <button class="btn btn-primary" (click)="onToggleDetails()" (click)="onCountArray()">Display Details</button>
+
+      <p *ngIf="toggleDisplay">This is the hidden text</p>
+
+      <p *ngFor="let count of countArr" [ngStyle]="{backgroundColor: count >= 5 ? 'blue' : 'transparent'}" [ngClass]="{'white-text': count >= 5 }">{{count}}
+      </p>
+    </div>
+  </div>
+</div>
