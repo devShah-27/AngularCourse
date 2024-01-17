@@ -16,6 +16,8 @@ export class ServeComponent {
   }
 
   onCountArray() {
-    this.countArr.push(this.countArr.length + 1);
+    // this.countArr.push(this.countArr.length + 1);
+    this.countArr.push(new Date());
+
   }
 }

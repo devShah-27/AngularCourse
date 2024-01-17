@@ -6,7 +6,7 @@
 
       <p *ngIf="toggleDisplay">This is the hidden text</p>
 
-      <p *ngFor="let count of countArr" [ngStyle]="{backgroundColor: count >= 5 ? 'blue' : 'transparent'}" [ngClass]="{'white-text': count >= 5 }">{{count}}
+      <p *ngFor="let count of countArr; let i = index" [ngStyle]="{backgroundColor: i >= 5 ? 'blue' : 'transparent'}" [ngClass]="{'white-text': i >= 5 }">{{count}}
       </p>
     </div>
   </div>
